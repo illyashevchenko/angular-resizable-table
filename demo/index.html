@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resizable</title>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="../src/angular-resizable.js"></script>
+  <link rel="stylesheet" href="../src/angular-resizable.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myApp" ng-controller="TestController">
+<div class="info2">
+  <h4>events:</h4>
+  <ul>
+    <li class="animate-repeat" ng-repeat="event in events track by $index">
+      {{ event.name }}
+    </li>
+  </ul>
+</div>
+<div class="container1">
+  <div resizable
+       id="standard-box"
+       r-directions="['right', 'bottom', 'left', 'top']">
+    <div class="inner">
+      <h1>{{ msg }}</h1>
+      <p>Testing out events on angular-resizable</p>.
+    </div>
+  </div>
+</div>
+</body>
+</html>
